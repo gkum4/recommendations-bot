@@ -19,7 +19,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 const users = [];
  
-bot.on('message', async (message) => {
+module.exports = bot.on('message', async (message) => {
   const chatId = message.chat.id;
 
   let userIndex = users.findIndex(user => user.getId() === chatId);
